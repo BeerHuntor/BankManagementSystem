@@ -115,7 +115,7 @@ public class BankSystem {
     private static void BankLoggedInDialogue() {
         while (IsLoggedIn)
         {
-            System.out.println("Welcome to the Banking System, You are logged in as" + RequestedBank.GetBankName() +
+            System.out.println("Welcome to the Banking System, You are logged in as " + RequestedBank.GetBankName() +
                     " What would you like to do?\nPress the corresponding number to navigate");
             System.out.println("1) Register new customer");
             System.out.println("2) See List Of Customers");
