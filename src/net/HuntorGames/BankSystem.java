@@ -46,13 +46,11 @@ public class BankSystem {
             }
             if (command == 1) { // open bank
                 OpenBankDialogue();
-                continue;
             } else if (command == 2) { // log into bank
                 if (!IsLoggedIn) {
                     BankLoginDialogue();
                 }
                 BankLoggedInDialogue();
-                continue;
 
             } else if (command == 3) { // check personal account
                 String bankName = RequestInputString("What is the name of the bank that you bank with?");
@@ -69,7 +67,6 @@ public class BankSystem {
             }else {
                 System.out.println("Invalid option, please try again!");
             }
-            continue;
         }
     }
     private static void PersonalBankLoginDialogue(String firstName, String lastName, int ssn)
@@ -93,14 +90,11 @@ public class BankSystem {
             }
             if(command == 1) {
                 System.out.println("Your available balance is £" + RequestedBank.GetCustomerAccount(firstName, lastName, ssn).getBalance());
-                continue;
-
             } else if (command == 2) {
                 System.out.println("How much would you like to deposit?");
                 float amountToDeposit = scanner.nextFloat();
                 account.DepositMoney(amountToDeposit);
                 scanner.nextLine();
-                continue;
             } else if (command == 3) {
                 System.out.println("How much would you like to withdraw?");
                 float amountToWithdraw = scanner.nextFloat();
@@ -134,7 +128,6 @@ public class BankSystem {
                 float depositAmount = RequestInputFloat("What is the initial deposit amount?");
                 RequestedBank.OpenCheckingAccount(RequestedBank.RegisterCustomer(firstName, middleName, lastName, age, ssn), depositAmount);
                 System.out.println("Checking account successful! Account created for " + firstName + " " + middleName + " " + lastName);
-                continue;
             } else if (command == 2) { // return customer list
                 RequestedBank.GetCustomerList();
             } else if (command == 3) { // return to main menu
