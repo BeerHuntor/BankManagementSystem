@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238962f4-2a42-4a55-a2ee-500ad8d721ce" name="Changes" comment="no change">
+    <list default="true" id="238962f4-2a42-4a55-a2ee-500ad8d721ce" name="Changes" comment="fixed bug where it was allowing duplicate banks to be created.  Added for loop to itterate through the list of banks looking for the given bank name and return an error message if one already exists.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/HuntorGames/BankSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/HuntorGames/BankSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/net/HuntorGames/BankSystem.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,7 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675175888079</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed typo in BankedLoggedInDialogue() method.">
+      <created>1675176025496</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675176025496</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixed typo in BankedLoggedInDialogue() method.">
+      <created>1675176171786</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675176171786</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +126,8 @@
     <MESSAGE value="Added functionality to personal login system, allowing the customer to check balance, withdraw and deposit from their available balance." />
     <MESSAGE value="Changed the GetCustomerAccount to return the account of the customer to allow integration between deposit and withdrawl of money" />
     <MESSAGE value="no change" />
-    <option name="LAST_COMMIT_MESSAGE" value="no change" />
+    <MESSAGE value="fixed typo in BankedLoggedInDialogue() method." />
+    <MESSAGE value="fixed bug where it was allowing duplicate banks to be created.  Added for loop to itterate through the list of banks looking for the given bank name and return an error message if one already exists." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug where it was allowing duplicate banks to be created.  Added for loop to itterate through the list of banks looking for the given bank name and return an error message if one already exists." />
   </component>
 </project>

@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class BankSystem {
     /*
-        Bank managemenet system components:
-        Person(which saves first, middle, last name, age and a "social security number"
+        Bank management system components:
+        Person (which saves first, middle, last name, age and a "social security number"
         Bank (Which saves a list of customers and their checking accounts, max Overdraw Limit)
         Checking Account (Should have current value, methods for withdrawing/depositing money)
 
@@ -35,6 +35,7 @@ public class BankSystem {
             System.out.println("1) Open Bank");
             System.out.println("2) Log into Bank");
             System.out.println("3) Log into personal bank account");
+            System.out.println("4) Exit Program");
 
             try {
                 command = scanner.nextInt(); // leaves /n in buffer.
@@ -61,9 +62,11 @@ public class BankSystem {
                     int ssn = RequestInputInt("What is your Social Security Number?");
                     IsLoggedInPersonalAccount = true;
                     PersonalBankLoginDialogue(firstName, lastName, ssn);
-                    //TODO: Finish implementing the funtionality of checking user accounts.
                 }
-            } else {
+            } else if (command == 4){
+                System.out.println("Exiting program.");
+                System.exit(0);
+            }else {
                 System.out.println("Invalid option, please try again!");
             }
             continue;
@@ -177,7 +180,7 @@ public class BankSystem {
         String bankName = RequestInputString("Please type your bank name");
         String managerName = RequestInputString("Please type the name of the bank manager.");
         String bankPassword = RequestInputString("Please type the banks password.");
-        System.out.println("Stand by we are creating your bank for you now: Details are; Bank Name: " + bankName + ", Managaer Name "
+        System.out.println("Stand by we are creating your bank for you now: Details are; Bank Name: " + bankName + ", Manager Name "
                 + managerName + ", Bank Password: " + bankPassword);
         System.out.println("Is this correct?");
         String response = scanner.nextLine();
@@ -187,9 +190,12 @@ public class BankSystem {
     }
 
     public static void CreateBank(String name, String managerName, String managerPassword) {
-        if (banks.contains(name)) {
-            System.out.println("Bank already exists! Please log into the managers section to manage your bank. ");
-            return;
+
+        for (Bank bank : banks) {
+            if (bank.GetBankName().equalsIgnoreCase(name)) {
+                System.out.println("Bank already exists! Please log in to the bank to manage your bank. ");
+                return;
+            }
         }
         banks.add(new Bank(name, managerName, managerPassword));
     }
