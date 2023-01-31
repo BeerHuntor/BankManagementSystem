@@ -35,13 +35,13 @@ public class Bank extends CheckingAccount{
         return customers.containsKey(customer);
     }
 
-    public Customer GetCustomerAccount(String firstName, String lastName, int ssn)
+    public CheckingAccount GetCustomerAccount(String firstName, String lastName, int ssn)
     {
         for (Map.Entry<Customer, CheckingAccount> customer : customers.entrySet())
         {
             if (customer.getKey().GetFirstName().equalsIgnoreCase(firstName) && customer.getKey().GetLastName().equalsIgnoreCase(lastName) && customer.getKey().GetSSN() == ssn)
             {
-                return customer.getKey();
+                return customer.getValue();
             }
         }
         System.out.println("Sorry no customer accounts match those details. Try creating an account with a bank first.");
